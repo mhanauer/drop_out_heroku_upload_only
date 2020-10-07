@@ -1,0 +1,7 @@
+streamlit 
+joblib
+pandas 
+numpy
+xgboost == 0.90
+scikit-learn
+flask
