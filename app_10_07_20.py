@@ -100,7 +100,6 @@ def run():
             frames =  [predictors, telehealth, grant, EverServed, ActiveDuty_Else, NightsHomeless, aiety, mdd_r, mdd_s, another_s_ident, drug_use , er_hos_use_base,  jail_arrest_base]
             predictors_all = pd.concat(frames, axis = 1)
             predictors_all = predictors_all.to_numpy()
-            predictors_all
             prob_drop =  best_model.predict_proba(predictors_all)
             prob_drop =   pd.DataFrame(prob_drop[:,1], columns = ["prob_drop"])
             def if_else(row):
@@ -137,5 +136,6 @@ def run():
             frames = [ConsumerID, drop_out_risk_level]
             pred_dat = pd.concat(frames, axis = 1)
             st.write(pred_dat)
+st.set_option('deprecation.showfileUploaderEncoding', False)
 if __name__ == '__main__':
     run()
