@@ -13,7 +13,7 @@ from xgboost import XGBClassifier
 from xgboost.sklearn import XGBClassifier
 from sklearn.model_selection import RandomizedSearchCV
 
-filename = "gs_drop_10_7_20.joblib"
+filename = "gs_drop_10_10_20.joblib"
 best_model = joblib.load(filename)
 
 
